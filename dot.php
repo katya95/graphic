@@ -35,17 +35,57 @@ function check_form(theForm)
 
 </script>
 
-<form action="image.php" method='POST' accept-charset="utf-8" 
+ <!DOCTYPE HTML>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<title>pixel</title>
+<link href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" rel="stylesheet"> 
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/jquery.min.js"></script>
+</head><body>
+<h2>pixel</h2>
+<script type="text/javascript" src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+<div class="container w-50">
+<form class="form-control g-3 needs-validation" novalidate action="image.php" method='POST' accept-charset="utf-8"
 onsubmit="return check_form(this)">
-<p><input name="name" type="text" size="30" 
- value="<?php echo $_POST['name'];  ?>"
- readonly></p>
- <p><input name="color" type="text" size="30" 
-  value="<?php echo $_POST['color'];  ?>"
-  readonly></p>
-<p> x :<br> 
-<input name='x' type='text'  value='' /></p>
-<p>y: <br> 
-<input name='y' type='text'  value='' /></p>
-<input type='submit' value='Сохранить' id="btn_submit">
+<div class="row">
+ <div class="col-sm">
+ <label for="x" class="form-label">x:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='x'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="y" class="form-label">y:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='y'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="name" class="form-label">Name:</label>
+ </div>
+ <div class="col-sm">
+ <input class="form-control" name='name'  type="text"  value='<?php echo $_POST['name'];  ?>' placeholder="Readonly input here..." readonly>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="color" class="form-label">Color:</label>
+ </div>
+ <div class="col-sm">
+ <input class="form-control" name='color'  type="text"  value='<?php echo $_POST['color'];  ?>' placeholder="Readonly input here..." readonly>
+ </div>
+ </div>
+ <div class="row  p-2">
+ <div class="col-sm">
+ <button type="submit" class="btn btn-primary"  name="submit">Save</button>
+ </div>
+ </div>
  </form>
+  </div>
+</body>
+</html>

@@ -73,25 +73,94 @@ function check_form(theForm)
 }	
 	</script>
 	
-<form action="image.php" method='POST' accept-charset="utf-8"
+  
+  <!DOCTYPE HTML>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<title>circle</title>
+<link href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" rel="stylesheet"> 
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/jquery.min.js"></script>
+</head><body>
+<h2>Circle</h2>
+<script type="text/javascript" src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+<div class="container w-50">
+<form class="form-control g-3 needs-validation" novalidate action="image.php" method='POST' accept-charset="utf-8"
 onsubmit="return check_form(this)">
-			<p><input name="name" type="text" size="30" 
-   value="<?php $_POST['name']; echo $_POST['name'];  ?>"
-   readonly></p>
-   <p><input name="color" type="text" size="30" 
-   value="<?php $_POST['color']; echo $_POST['color'];  ?>"
-   readonly></p>
-  <p>Name x:<br> 
- <input name='name_center_x' type='text'  value='' /></p>
- <p>Name Y: <br> 
-  <input name='name_center_y' type='text'  value='' /></p>
- <p>Width: <br> 
- <input name='width' type='text'  value='' /></p>
- <p>Height: <br> 
-  <input name='height' type='text'  value='' /></p>
-   <p>Start circle degree: <br> 
-  <input name='start_circle_degree' type='text'  value='0' /></p>
-   <p>End circle degree: <br> 
-  <input name='end_circle_degree' type='text'  value='360' /></p>
-  <input type='submit' value='Сохранить' id="btn_submit">
-  </form>
+<div class="row">
+ <div class="col-sm">
+ <label for="Name x" class="form-label">Name x:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='name_center_x'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="Name y" class="form-label">Name y:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='name_center_y'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="Width" class="form-label">Width:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='width'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="Height" class="form-label">Height:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='height'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="Start circle degree" class="form-label">Start circle degree:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='start_circle_degree'  type="text"  placeholder="0" value='0'  required/>
+<div class="invalid-feedback">
+      Please provide a valid start circle degree.
+    </div>
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="End circle degree" class="form-label">End circle degree:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='end_circle_degree'  type="text"  placeholder="360" value='360' required />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="name" class="form-label">Name:</label>
+ </div>
+ <div class="col-sm">
+ <input class="form-control" name='name'  type="text"  value='<?php echo $_POST['name'];  ?>' placeholder="Readonly input here..." readonly>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="color" class="form-label">Color:</label>
+ </div>
+ <div class="col-sm">
+ <input class="form-control" name='color'  type="text"  value='<?php echo $_POST['color'];  ?>' placeholder="Readonly input here..." readonly>
+ </div>
+ </div>
+ <div class="row  p-2">
+ <div class="col-sm">
+ <button type="submit" class="btn btn-primary"  name="submit">Save</button>
+ </div>
+ </div>
+ </form>
+  </div>
+</body>
+</html>
+  

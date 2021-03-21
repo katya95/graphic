@@ -89,25 +89,93 @@ function check_form(theForm)
 }	
 </script>
 	
-<form action="image.php" method='POST' accept-charset="utf-8"
+
+<!DOCTYPE HTML>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<title>triangle</title>
+<link href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" rel="stylesheet"> 
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/jquery.min.js"></script>
+</head><body>
+<h2>triangle</h2>
+<script type="text/javascript" src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+<div class="container w-50">
+<form class="form-control g-3 needs-validation" novalidate action="image.php" method='POST' accept-charset="utf-8"
 onsubmit="return check_form(this)">
-<p><input name="name" type="text" size="30" 
-value="<?php echo $_POST['name'];  ?>"
-readonly></p>
-<p><input name="color" type="text" size="30" 
-value="<?php echo $_POST['color'];  ?>"
-readonly></p>
- <p>first x :<br> 
- <input name='first_x' type='text'  value='' /></p>
-<p>first y: <br> 
-<input name='first_y' type='text'  value='' /></p>
-<p>second x: <br> 
-<input name='second_x' type='text'  value='' /></p>
-<p>second y: <br> 
-<input name='second_y' type='text'  value='' /></p>
-<p>third x: <br> 
-<input name='third_x' type='text'  value='' /></p>
-<p>third y: <br> 
-<input name='third_y' type='text'  value='' /></p>
-<input type='submit' value='Сохранить' id="btn_submit">
-</form>
+<div class="row">
+ <div class="col-sm">
+ <label for="first x " class="form-label">first x:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='first_x'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="first y" class="form-label">first y:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='first_y'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="second x" class="form-label">second x:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='second_x'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="second y" class="form-label">second y:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='second_y'  type="text"  value=''  />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="third x" class="form-label">third x:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='third_x'  type="text" value=''  required/>
+<div class="invalid-feedback">
+      Please provide a valid start circle degree.
+    </div>
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="'third y" class="form-label">'third y:</label>
+ </div>
+ <div class="col-sm">
+<input class="form-control" name='third_y'  type="text"  value='' required />
+</div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="name" class="form-label">Name:</label>
+ </div>
+ <div class="col-sm">
+ <input class="form-control" name='name'  type="text"  value='<?php echo $_POST['name'];  ?>' placeholder="Readonly input here..." readonly>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-sm">
+ <label for="color" class="form-label">Color:</label>
+ </div>
+ <div class="col-sm">
+ <input class="form-control" name='color'  type="text"  value='<?php echo $_POST['color'];  ?>' placeholder="Readonly input here..." readonly>
+ </div>
+ </div>
+ <div class="row  p-2">
+ <div class="col-sm">
+ <button type="submit" class="btn btn-primary"  name="submit">Save</button>
+ </div>
+ </div>
+ </form>
+  </div>
+</body>
+</html>
